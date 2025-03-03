@@ -30,7 +30,10 @@
         </div>
     </nav>
     
-    <h1>Hello World!</h1>
+    <?php echo "<br>"; ?>
+    <div class="container">
+        <?php var_dump($potatoes); ?>
+    </div>
 
 </body>
 </html>

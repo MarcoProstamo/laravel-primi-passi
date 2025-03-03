@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
+
+$potatoes = [['name' => 'Russet', 'color' => 'brown'], ['name' => 'Yukon Gold', 'color' => 'yellow'], ['name' => 'Red', 'color' => 'red'], ['name' => 'Purple', 'color' => 'purple']];
+
+Route::get('/', function() use ($potatoes) {
+    return view('home', ['potatoes' => $potatoes]);
 });
 
 Route::get('/us', function () {
